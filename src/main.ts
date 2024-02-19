@@ -4,8 +4,11 @@ import { NxRect } from "./rect";
 import { NxSize } from "./size";
 import { NxVector2D } from "./vector";
 
+// For development
 const canvas = document.getElementById("root")! as HTMLCanvasElement;
 const context = canvas.getContext("2d")!;
+
+// const context = screen.getContext("2d")!;
 
 const core = new NxCore(context);
 const rectPosition = new NxVector2D(20, 20);
