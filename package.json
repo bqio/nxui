@@ -1,0 +1,11 @@
+{
+  "name": "nxui",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "esbuild --bundle --watch --sourcemap --sources-content=false --target=es2022 src/main.ts --outfile=dist/bundle.js"
+  },
+  "author": "bqio",
+  "devDependencies": {
+    "esbuild": "0.20.1"
+  }
+}
