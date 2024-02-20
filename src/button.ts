@@ -6,8 +6,8 @@ import { NxVector2D } from "./vector";
 
 class NxButton implements NxDrawableObject {
   private _text: string;
-  private _textColor: string = "#FFFFFF";
-  private _textSize: number = 14;
+  private _textColor: string;
+  private _textSize: number;
   private _rect: NxRect;
 
   constructor(
@@ -57,9 +57,8 @@ class NxButton implements NxDrawableObject {
   update(core: NxCore): void {}
 
   draw(context: CanvasRenderingContext2D): void {
-    this.rect.draw(context);
-
     context.save();
+    this.rect.draw(context);
     context.font = `${this.textSize}px Arial`;
     const size = context.measureText(this.text);
     const x = this.rect.position.x + (this.rect.size.w - size.width) / 2;
